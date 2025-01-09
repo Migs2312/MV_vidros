@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVvidros</title>
+    <link rel="icon" href="image/dev/migs_mola.png">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+   <script src="script/script.js" defer></script>
+</head>
+<body>
+    <div class="display_none">
+        <img src="image/mold/04BR_FL.jpeg">
+        <img src="image/mold/014BR.jpeg">
+        <img src="image/mold/016BR.jpeg">
+        <img src="image/mold/114BR.jpeg">
+        <img src="image/mold/115BR.jpeg">
+        <img src="image/mold/117BR.jpeg">
+        <img src="image/mold/215PBR_FL.jpeg">
+        <img src="image/mold/220BR.jpeg">
+        <img src="image/mold/221BR.jpeg">
+        <img src="image/mold/305BR_FL.jpeg">
+        <img src="image/mold/031700.jpeg">
+    </div>
+    <main>
+        <div class="sideways">
+            
+            <div id="image"></div>
+
+            <form id="mold" class="column">
+                <label for="refm">
+                    Moldura:
+                </label>
+                <input list="ref" id="refm" onchange="imageChange()">
+                <datalist name="ref" id="ref">
+                    <option value="04BR_FL">R$15</option>
+                    <option value="014BR">R$17</option>
+                    <option value="016BR">R$27</option>
+                    <option value="114BR">R$19</option>
+                    <option value="115BR">R$15</option>
+                    <option value="117BR">R$15</option>
+                    <option value="215PBR_FL">R$20</option>
+                    <option value="220BR">R$45</option>
+                    <option value="221BR">R$25</option>
+                    <option value="305BR_FL">R$26</option>
+                    <option value="031-700">R$35</option>
+                </datalist><br>
+
+                <label for="length">
+                    Largura(cm):
+                </label>
+                <input type="text" id="length" name="length">
+
+                <label for="height">
+                    Altura(cm):
+                </label>
+                <input type="text" id="height" name="height"><br>
+                <div class="sideways">
+                    <label for="glass">Vidro normal</label>
+                    <input type="radio" id="glass" name="glass" value=True>
+                </div>
+
+                <div class="sideways">
+                    <label for="noreflex">Vidro antireflexo</label>
+                    <input type="radio" id="noreflex" name="glass" value=False>
+                </div>
+
+                <div class="sideways">
+                    <label for="noglass">Sem vidro</label>
+                    <input type="radio" id="noglass" name="glass" value=null>
+                </div><br>
+
+                <input type="button" onclick="mold()" value="Calcular valor">
+            </form>
+
+            
+        </div> 
+            <div id="result" class="column">
+                <table id='money'>
+                    <thead>
+                        <th>Moldura</th>
+                        <th>Medidas</th>
+                        <th>Vidro</th>
+                        <th>M. Obra</th>
+                        <th>Total</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </main>
+        <div id="dev">
+            <div id="devName">Desenvolvido por Migst</div>
+            <img src="image/dev/migs_mola.png" width="40px" height="40px" onmouseover="dev()" onmouseout="offDev()">
+        </div>
+</body>
+</html>

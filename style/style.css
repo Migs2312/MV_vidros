@@ -1,0 +1,93 @@
+
+@import url(animation.css);
+body{
+    background-color: rgb(199, 199, 199);
+}
+#dev{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:5px;
+    padding:2px;
+    position: fixed;
+    right:5px;
+    bottom:5px;
+}
+#dev img{
+    padding:2px;
+    background-color: white;
+    border-radius: 50px;
+}
+#devName{
+    opacity: 0%;
+    padding:7px;
+    margin:5px;
+    border-radius: 20px;
+    background-color: rgba(57, 0, 83, 0.774);
+}
+.opacity_change {
+    animation: opacity_change 0.1s linear;
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sideways{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+.display_none{
+    display: none;
+}
+
+
+#mold{
+    background-color: aqua;
+    padding:10px;
+    height:100%;
+    width:15%;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin:50px;
+    min-width: 190px;
+}
+#image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto;
+    padding:10px;
+    height:267px;
+    min-width: 150px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin:50px;
+}
+
+#money{
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: x-large;
+    margin:50px;
+    margin-bottom: 0px;
+}
+#money thead{
+    background-color: rgb(0, 175, 175);
+}
+#money tbody{
+    background-color: rgb(92, 92, 255);
+}
+#money td, th{
+    border-radius: 10px;
+    min-width: 130px;
+    height: 28px;
+    padding:5px;
+    margin: 20px;
+}

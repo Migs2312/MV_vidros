@@ -1,0 +1,5 @@
+@keyframes opacity_change {
+    100% {
+        opacity: 90%;
+    }
+}
