@@ -16,7 +16,7 @@ function mold(){
 
     //Tipo do vidro
     glassType=null
-    for (var i = 0, length = glass.length; i < length; i++) {
+    for (var i = 0, leng = glass.length; i < leng; i++) {
         if (glass[i].checked) {
         glassType = glass[i].value
         break;
@@ -50,11 +50,11 @@ function mold(){
             //Tamanho da moldura
                 lengthFix = Number(len.value.replace(",","."));
                 round(lengthFix);
+                length = rounded;
                 heightFix = Number(hei.value.replace(",","."));
                 round(heightFix);
-                length = Number(lengthFix)+rounder
-                height = Number(heightFix)+rounder
-                perimeter = (((length*2)+(height*2)).toFixed(2))/100;
+                height = rounded;
+                perimeter = (((length*2)+(height*2)))/100;
             //Tamanho da moldura
 
             //Valor do vidro
@@ -70,18 +70,18 @@ function mold(){
                     glassName="Sem vidro"
                     glassVal=0;
                 };
-                glassValueFix = (((height*length)/10000)*glassVal).toFixed(2);
+                glassValueFix = ((((height/100)*(length/100)))*glassVal);
                 round(glassValueFix);
-                glassValue = Number(glassValueFix)+rounder;
+                glassValue = rounded;
             //Valor do vidro
 
             //Cálculo Final
-                totalPrim = ((mValue*(perimeter))+Number(glassValue)).toFixed(2);
+                totalPrim = ((mValue*(perimeter))+Number(glassValue));
                 mObra = totalPrim*(0.45)
 
-                totalFix = (Number(totalPrim)+Number(mObra)).toFixed(2);
+                totalFix = (Number(totalPrim)+Number(mObra));
                 round(totalFix);
-                total = Number(totalFix)+rounder;
+                total = rounded;
             //Cálculo Final
         //Matemática
 
@@ -95,9 +95,10 @@ function mold(){
     function round(num){
         rounder = 0
         if(num%5!=0){
-            rounder = 5-(rounder%5)
+            rounder = 5-(num%5)
         };
-        return(rounder);
+        rounded=num+rounder
+        return(rounded);
     };
 //Arredondamento
 
