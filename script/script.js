@@ -26,14 +26,14 @@ function mold(){
 
 
     //Verificação de preenchimento
-        if(len.value<=0 || hei.value<=0 || glassType==null || mValue==0){
+        if(len.value<=0 || hei.value<=0 || isNaN(len.value)==true || isNaN(hei.value)==true || glassType==null || mValue==0){
             if(mValue==0){
                 verific = "Selecione uma moldura válida"
             }
-            else if(len.value<=0){
+            else if(len.value<=0 || isNaN(len.value)==true){
                 verific = "Preencha o campo Largura com um número válido"
             }
-            else if(hei.value<=0){
+            else if(hei.value<=0 || isNaN(hei.value)==true){
                 verific = "Preencha o campo Altura com um número válido"
             }
             else if(glassType==null){
