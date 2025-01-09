@@ -48,23 +48,16 @@ function mold(){
         //Matemática
 
             //Tamanho da moldura
-                lengthRound=0;
-                heightRound=0;
                 lengthFix = Number(len.value.replace(",","."));
-                if(lengthFix%5!=0){
-                    lengthRound = 5-(lengthFix%5)
-                }
+                round(lengthFix);
                 heightFix = Number(hei.value.replace(",","."));
-                if(heightFix%5!=0){
-                    heightRound = 5-(heightFix%5)
-                }
-                length = Number(lengthFix)+Number(lengthRound);
-                height = Number(heightFix)+Number(heightRound);
+                round(heightFix);
+                length = Number(lengthFix)+rounder
+                height = Number(heightFix)+rounder
                 perimeter = (((length*2)+(height*2)).toFixed(2))/100;
             //Tamanho da moldura
 
             //Valor do vidro
-                glassRound = 0
                 if(glassType=="True"){
                     glassName="Normal"
                     glassVal = 80;
@@ -78,21 +71,17 @@ function mold(){
                     glassVal=0;
                 };
                 glassValueFix = (((height*length)/10000)*glassVal).toFixed(2);
-                if(glassValueFix%5!=0){
-                    glassRound = 5-(glassValueFix%5)
-                }
-                glassValue = Number(glassValueFix)+Number(glassRound)
+                round(glassValueFix);
+                glassValue = Number(glassValueFix)+rounder;
             //Valor do vidro
 
             //Cálculo Final
-                totalRound = 0
                 totalPrim = ((mValue*(perimeter))+Number(glassValue)).toFixed(2);
                 mObra = totalPrim*(0.45)
+
                 totalFix = (Number(totalPrim)+Number(mObra)).toFixed(2);
-                if(totalFix%5!=0){
-                    totalRound = 5-(totalFix%5)
-                }
-                total = Number(totalFix)+Number(totalRound);
+                round(totalFix);
+                total = Number(totalFix)+rounder;
             //Cálculo Final
         //Matemática
 
@@ -101,6 +90,16 @@ function mold(){
         //Conteúdo
     }
 };
+
+//Arredondamento
+    function round(num){
+        rounder = 0
+        if(num%5!=0){
+            rounder = 5-(rounder%5)
+        };
+        return(rounder);
+    };
+//Arredondamento
 
 //Mudança de Imagem
 function imageChange(){
@@ -183,7 +182,6 @@ function dev() {
         developer.style.opacity = "90%";
     }, 80);
 };
-
 function offDev(){
             developer.classList.remove("opacity_change");
             developer.style.opacity = "0%";
