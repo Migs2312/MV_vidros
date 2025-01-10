@@ -33,7 +33,7 @@
                 </label>
                 <input list="ref" id="refm" onchange="imageChange()">
                 <datalist name="ref" id="ref">
-                    <option value="04BR_FL">R$15</option>
+                    <option value="004BR">R$15</option>
                     <option value="014BR">R$17</option>
                     <option value="016BR">R$27</option>
                     <option value="114BR">R$19</option>
@@ -44,6 +44,15 @@
                     <option value="221BR">R$25</option>
                     <option value="305BR_FL">R$26</option>
                     <option value="031-700">R$35</option>
+                    <option value="031PFB">R$27</option>
+                    <option value="016PPF">R$21</option>
+                    <option value="073PF">R$26</option>
+                    <option value="305PF_FL">R$22</option>
+                    <option value="014PF_FL">R$17</option>
+                    <option value="198GRAY">R$24</option>
+                    <option value="003MV_FL">R$15</option>
+                    <option value="014-403">R$17</option>
+                    <option value="221PF">R$25</option>
                 </datalist><br>
 
                 <label for="length">
@@ -55,6 +64,12 @@
                     Altura(cm):
                 </label>
                 <input type="text" id="height" name="height"><br>
+
+                <label for="hook">
+                    Gancho(unidade):
+                </label>
+                <input type="text" id="hook" name="hook"><br>
+
                 <div class="sideways">
                     <label for="glass">Vidro normal</label>
                     <input type="radio" id="glass" name="glass" value=True>
@@ -80,6 +95,8 @@
                     <thead>
                         <th>Moldura</th>
                         <th>Medidas</th>
+                        <th>Eucatex</th>
+                        <th>Ganchos</th>
                         <th>Vidro</th>
                         <th>M. Obra</th>
                         <th>Total</th>
@@ -90,8 +107,12 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

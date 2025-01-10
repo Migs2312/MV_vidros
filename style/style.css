@@ -37,6 +37,7 @@ body{
 }
 .sideways{
     display: flex;
+    height: fit-content;
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: center;
@@ -54,7 +55,7 @@ body{
     border: 3px solid black;
     border-radius: 10px;
     text-align: center;
-    margin:50px;
+    margin-left:50px;
     min-width: 190px;
 }
 #image{
@@ -73,7 +74,7 @@ body{
     border: 2px solid black;
     border-radius: 10px;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     margin:50px;
     margin-bottom: 0px;
 }
@@ -85,7 +86,7 @@ body{
 }
 #money td, th{
     border-radius: 10px;
-    min-width: 130px;
+    min-width: 90px;
     height: 28px;
     padding:5px;
     margin: 20px;
