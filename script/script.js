@@ -117,124 +117,124 @@ function mold(){
 //Arredondamento
 
 //Mudança de Imagem
-function imageChange(){
-    moldValue(moldura.value);
-    mType = moldStor[1];
-    if(mValid=="valid"){
-        document.getElementById('image').style.backgroundImage = "url(./image/mold/"+mType+".jpeg)";
+    function imageChange(){
+        moldValue(moldura.value);
+        mType = moldStor[1];
+        if(mValid=="valid"){
+            document.getElementById('image').style.backgroundImage = "url(./image/mold/"+mType+".jpeg)";
+        }
     }
-}
-setInterval(imageChange, 10);
+    setInterval(imageChange, 10);
 //Mudança de Imagem
 
 //Armazenamento
-function moldValue(mold){
-    mValid = "valid";
-    moldStor=[]
-    switch(mold){
-        default:
-            mValid = "invalid";
-        break;
-        case "":
-            mVal=0;
-            mImg="none";
-        break;
-        case "004BR":
-            mVal=15;
-            mImg="04BR_FL";
-        break;
-        case "014BR":
-            mVal=17
-            mImg="014BR";
-        break;
-        case "016BR":
-            mVal=27
-            mImg="016BR";
-        break;
-        case "114BR":
-            mVal=19
-            mImg="114BR";
-        break;
-        case "115BR":
-            mVal=15
-            mImg="115BR";
-        break;
-        case "117BR":
-            mVal=15
-            mImg="117BR";
-        break;
-        case "215PBR_FL":
-            mVal=20
-            mImg="215PBR_FL";
-        break;
-        case "220BR":
-            mVal=45
-            mImg="220BR";
-        break;
-        case "221BR":
-            mVal=25
-            mImg="221BR";
-        break;
-        case "305BR_FL":
-            mVal=26
-            mImg="305BR_FL";
-        break;
-        case "031-700":
-            mVal=35
-            mImg="031700";
-        break;
-        case "031PFB":
-            mVal=27
-            mImg="031PFB";
-        break;
-        case "016PPF":
-            mVal=21
-            mImg="016PPF";
-        break;
-        case "073PF":
-            mVal=26
-            mImg="073PF";
-        break;
-        case "305PF_FL":
-            mVal=22
-            mImg="305PF_FL";
-        break;
-        case "198GRAY":
-            mVal=24
-            mImg="198GRAY";
-        break;
-        case "003MV_FL":
-            mVal=15
-            mImg="003MV_FL";
-        break;
-        case "014-403":
-            mVal=17
-            mImg="014403";
-        break;
-        case "221PF":
-            mVal=25
-            mImg="221PF";
-        break;
-        case "014PF_FL":
-            mVal=17
-            mImg="014PF_FL";
-        break;
+    function moldValue(mold){
+        mValid = "valid";
+        moldStor=[]
+        switch(mold){
+            default:
+                mValid = "invalid";
+            break;
+            case "":
+                mVal=0;
+                mImg="none";
+            break;
+            case "004BR":
+                mVal=15;
+                mImg="04BR_FL";
+            break;
+            case "014BR":
+                mVal=17
+                mImg="014BR";
+            break;
+            case "016BR":
+                mVal=27
+                mImg="016BR";
+            break;
+            case "114BR":
+                mVal=19
+                mImg="114BR";
+            break;
+            case "115BR":
+                mVal=15
+                mImg="115BR";
+            break;
+            case "117BR":
+                mVal=15
+                mImg="117BR";
+            break;
+            case "215PBR_FL":
+                mVal=20
+                mImg="215PBR_FL";
+            break;
+            case "220BR":
+                mVal=45
+                mImg="220BR";
+            break;
+            case "221BR":
+                mVal=25
+                mImg="221BR";
+            break;
+            case "305BR_FL":
+                mVal=26
+                mImg="305BR_FL";
+            break;
+            case "031-700":
+                mVal=35
+                mImg="031700";
+            break;
+            case "031PFB":
+                mVal=27
+                mImg="031PFB";
+            break;
+            case "016PPF":
+                mVal=21
+                mImg="016PPF";
+            break;
+            case "073PF":
+                mVal=26
+                mImg="073PF";
+            break;
+            case "305PF_FL":
+                mVal=22
+                mImg="305PF_FL";
+            break;
+            case "198GRAY":
+                mVal=24
+                mImg="198GRAY";
+            break;
+            case "003MV_FL":
+                mVal=15
+                mImg="003MV_FL";
+            break;
+            case "014-403":
+                mVal=17
+                mImg="014403";
+            break;
+            case "221PF":
+                mVal=25
+                mImg="221PF";
+            break;
+            case "014PF_FL":
+                mVal=17
+                mImg="014PF_FL";
+            break;
+        };
+        moldStor.push(mVal);
+        moldStor.push(mImg);
+        return(moldStor)
     };
-    moldStor.push(mVal);
-    moldStor.push(mImg);
-    return(moldStor)
-};
 //Armazenamento
 
 //Desenvolvedor
-function dev() {
-    developer.classList.add("opacity_change");
-    setTimeout(() => {
-        developer.style.opacity = "90%";
-    }, 80);
-};
-function offDev(){
-            developer.classList.remove("opacity_change");
-            developer.style.opacity = "0%";
-};
+    function dev() {
+        developer.classList.add("opacity_change");
+        setTimeout(() => {
+            developer.style.opacity = "90%";
+        }, 80);
+    };
+    function offDev(){
+                developer.classList.remove("opacity_change");
+                developer.style.opacity = "0%";
+    };
 //Desenvolvedor
