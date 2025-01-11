@@ -203,7 +203,7 @@ function mold(){
                 mVal=24
                 mImg="198GRAY";
             break;
-            case "003MV_FL":
+            case "003PRMV_FL":
                 mVal=15
                 mImg="003MV_FL";
             break;
@@ -218,6 +218,26 @@ function mold(){
             case "014PF_FL":
                 mVal=17
                 mImg="014PF_FL";
+            break;
+            case "043_FL":
+                mVal=15
+                mImg="043_FL";
+            break;
+            case "042MV_FL":
+                mVal=15
+                mImg="042MV_FL";
+            break;
+            case "115RS":
+                mVal=15
+                mImg="115RS";
+            break;
+            case "115VD3":
+                mVal=15
+                mImg="115VD3";
+            break;
+            case "117-250_FL":
+                mVal=15
+                mImg="117250_FL";
             break;
         };
         moldStor.push(mVal);
