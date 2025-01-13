@@ -86,7 +86,7 @@ body{
 }
 #money td, th{
     border-radius: 10px;
-    min-width: 90px;
+    min-width: 110px;
     height: 28px;
     padding:5px;
     margin: 20px;

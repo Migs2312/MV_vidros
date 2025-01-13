@@ -100,7 +100,7 @@ function mold(){
         //Matemática
 
         //Conteúdo
-                result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td>"+ref+"</td><td>"+lengthFix+"x"+heightFix+"</td><td>"+length+"x"+height+"</td><td>"+ho.value+"un.</td><td>"+glassName+"</td><td>45%</td></tr><tr><td>R$"+mValue+"</td><td>"+perimeter+"m</td><td>R$"+eucatex+"</td><td>R$"+hook+"</td><td>R$"+glassValue+"</td><td>R$"+mObra.toFixed(2)+"</td><td>R$"+total+"</td></tr></tbody></table>"
+                result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td>"+ref+"</td><td>"+lengthFix+"x"+heightFix+"</td><td>"+length+"x"+height+"</td><td>"+ho.value+"un</td><td>"+glassName+"</td><td>45%</td></tr><tr><td>R$"+mValue+"</td><td>"+perimeter+"m</td><td>R$"+eucatex+"</td><td>R$"+hook+"</td><td>R$"+glassValue+"</td><td>R$"+mObra.toFixed(2)+"</td><td>R$"+total+"</td></tr></tbody></table>"
         //Conteúdo
     }
 };
@@ -141,7 +141,7 @@ function mold(){
             break;
             case "004BR":
                 mVal=15;
-                mImg="04BR_FL";
+                mImg="004BR";
             break;
             case "014BR":
                 mVal=17
@@ -205,7 +205,7 @@ function mold(){
             break;
             case "003PRMV_FL":
                 mVal=15
-                mImg="003MV_FL";
+                mImg="003PRMV_FL";
             break;
             case "014-403":
                 mVal=17
@@ -238,6 +238,114 @@ function mold(){
             case "117-250_FL":
                 mVal=15
                 mImg="117250_FL";
+            break;
+            case "CL01MV_FL":
+                mVal=35
+                mImg="CL01MV_FL";
+            break;
+            case "200HF75":
+                mVal=50
+                mImg="200HF75";
+            break;
+            case "CT01MV_FL":
+                mVal=37
+                mImg="CT01MV_FL";
+            break;
+            case "SCIMV_FL":
+                mVal=16
+                mImg="SCIMV_FL";
+            break;
+            case "GMMV_FL":
+                mVal=19
+                mImg="GMMV_FL";
+            break;
+            case "CRUMV_FL":
+                mVal=13
+                mImg="CRUMV_FL";
+            break;
+            case "PTAZMV_FL":
+                mVal=15
+                mImg="PTAZMV_FL";
+            break;
+            case "LUAMV_FL":
+                mVal=15
+                mImg="LUAMV_FL";
+            break;
+            case "ETNICMV_FL":
+                mVal=15
+                mImg="ETNICMV_FL";
+            break;
+            case "35120_FL":
+                mVal=15
+                mImg="35120_FL";
+            break;
+            case "116ADMV_FL":
+                mVal=15
+                mImg="116ADMV_FL";
+            break;
+            case "116AMMV_FL":
+                mVal=15
+                mImg="116AMMV_FL";
+            break;
+            case "003ALMV_FL":
+                mVal=15
+                mImg="003ALMV_FL";
+            break;
+            case "002MGMV_FL":
+                mVal=15
+                mImg="002MGMV_FL";
+            break;
+            case "003MGMV_FL":
+                mVal=15
+                mImg="003MGMV_FL";
+            break;
+            case "003DRMV_FL":
+                mVal=15
+                mImg="003DRMV_FL";
+            break;
+            case "002MRMV_FL":
+                mVal=15
+                mImg="002MRMV_FL";
+            break;
+            case "002MVDR_FL":
+                mVal=15
+                mImg="002MVDR_FL";
+            break;
+            case "002VDMV_FL":
+                mVal=15
+                mImg="002VDMV_FL";
+            break;
+            case "002AMMV_FL":
+                mVal=15
+                mImg="002AMMV_FL";
+            break;
+            case "002OCMV_FL":
+                mVal=15
+                mImg="002OCMV_FL";
+            break;
+            case "111AZMV_FL":
+                mVal=15
+                mImg="111AZMV_FL";
+            break;
+            case "111VMMV_FL":
+                mVal=15
+                mImg="111VMMV_FL";
+            break;
+            case "111CBMV_FL":
+                mVal=15
+                mImg="111CBMV_FL";
+            break;
+            case "115AF":
+                mVal=15
+                mImg="115AF";
+            break;
+            case "115AZQ":
+                mVal=15
+                mImg="115AZQ";
+            break;
+            case "001RS":
+                mVal=15
+                mImg="001RS";
             break;
         };
         moldStor.push(mVal);
