@@ -126,6 +126,8 @@
                     <option value="115AF">R$15</option>
                     <option value="115AZQ">R$15</option>
                     <option value="001RS">R$15</option>
+                    <option value="016IMB">R$27</option>
+                    <option value="007LILMV_FL">R$17</option>
                 </datalist><br>
 
                 <label for="length">
@@ -143,20 +145,42 @@
                 </label>
                 <input type="text" id="hook" name="hook"><br>
 
-                <div class="sideways">
-                    <label for="glass">Vidro normal</label>
-                    <input type="radio" id="glass" name="glass" value=True>
-                </div>
+                <div class="sideways" id="radio">
+                    <div class="radio_group">
+                        <div>
+                            <input type="radio" id="glass" name="glass" value=True>
+                            <label for="glass">Vidro normal</label>
+                        </div>
 
-                <div class="sideways">
-                    <label for="noreflex">Vidro antireflexo</label>
-                    <input type="radio" id="noreflex" name="glass" value=False>
-                </div>
+                        <div>
+                            <input type="radio" id="noreflex" name="glass" value=False>
+                            <label for="noreflex">Vidro antireflexo</label>
+                        </div>
 
-                <div class="sideways">
-                    <label for="noglass">Sem vidro</label>
-                    <input type="radio" id="noglass" name="glass" value=null>
-                </div><br>
+                        <div>
+                            <input type="radio" id="mirror" name="glass" value="mirror">
+                            <label for="mirror">Espelho</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="noglass" name="glass" value=null>
+                            <label for="noglass">Sem vidro</label>
+                        </div>
+                    </div>
+                        
+                    <div class="radio_group">
+                        <div>
+                            <input type="radio" id="eucaPresYes" name="eucaPres" value="True">
+                            <label for="eucaPresYes">Com eucatex</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="eucaPresNo" name="eucaPres" value="False">
+                            <label for="eucaPresNo">Sem eucatex</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
 
                 <input type="button" onclick="mold()" value="Calcular valor">
             </form>

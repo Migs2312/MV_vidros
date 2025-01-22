@@ -6,6 +6,7 @@ var len = document.getElementById('length');
 var hei = document.getElementById('height');
 var ho = document.getElementById('hook');
 var glass = document.getElementsByName('glass');
+var euca = document.getElementsByName('eucaPres');
 var verific = ""
 
 function mold(){
@@ -17,7 +18,7 @@ function mold(){
 
     //Tipo do vidro
     glassType=null
-    for (var i = 0, leng = glass.length; i < leng; i++) {
+    for (var i = 0, glassLeng = glass.length; i < glassLeng; i++) {
         if (glass[i].checked) {
         glassType = glass[i].value
         break;
@@ -25,9 +26,19 @@ function mold(){
     }
     //Tipo do vidro
 
+    //Presença do eucatex
+    eucaType=null
+    for (var i = 0, eucaLeng = euca.length; i < eucaLeng; i++) {
+        if (euca[i].checked) {
+        eucaType = euca[i].value
+        break;
+        }
+    }
+    //Presença do Eucatex
+
 
     //Verificação de preenchimento
-        if(len.value<=0 || hei.value<=0 || isNaN(len.value)==true || isNaN(hei.value)==true || glassType==null || mValue==0 || ho.value<=0 || isNaN(ho.value)==true){
+        if(len.value<=0 || hei.value<=0 || isNaN(len.value)==true || isNaN(hei.value)==true || glassType==null || mValue==0 || ho.value<=0 || isNaN(ho.value)==true || eucaType==null){
             if(mValue==0){
                 verific = "Selecione uma moldura válida"
             }
@@ -43,10 +54,12 @@ function mold(){
             else if(glassType==null){
                 verific = "Selecione um tipo de vidro"
             }
+            else if(eucaType==null){
+                verific = "Selecione a presença do eucatex"
+            };
             result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td><td></td></td><td></td><td><td></td></td><td></td></tr></tbody></table><br>"+verific
         }
     //Verificação de preenchimento
-
 
     else{
         //Matemática
@@ -64,7 +77,14 @@ function mold(){
             //Eucatex
                 eucaFix = ((height/100)*(length/100))*50;
                 round(eucaFix);
-                eucatex = rounded;
+                if(eucaType=="True"){
+                    eucaDisplay = height+"x"+length
+                    eucatex = rounded;
+                }
+                else if(eucaType=="False"){
+                    eucaDisplay = "Sem eucatex"
+                    eucatex = 0;
+                }
             //Eucatex
 
             //Gancho
@@ -79,6 +99,10 @@ function mold(){
                 else if(glassType=="False"){
                     glassName="Antireflexo"
                     glassVal = 200;
+                }
+                else if(glassType=="mirror"){
+                    glassName="Espelho"
+                    glassVal=200;
                 }
                 else if(glassType=="null"){
                     glassName="Sem vidro"
@@ -100,7 +124,7 @@ function mold(){
         //Matemática
 
         //Conteúdo
-                result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td>"+ref+"</td><td>"+lengthFix+"x"+heightFix+"</td><td>"+length+"x"+height+"</td><td>"+ho.value+"un</td><td>"+glassName+"</td><td>45%</td></tr><tr><td>R$"+mValue+"</td><td>"+perimeter+"m</td><td>R$"+eucatex+"</td><td>R$"+hook+"</td><td>R$"+glassValue+"</td><td>R$"+mObra.toFixed(2)+"</td><td>R$"+total+"</td></tr></tbody></table>"
+                result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td>"+ref+"</td><td>"+lengthFix+"x"+heightFix+"</td><td>"+eucaDisplay+"</td><td>"+ho.value+"un</td><td>"+glassName+"</td><td>45%</td></tr><tr><td>R$"+mValue+"</td><td>"+perimeter+"m</td><td>R$"+eucatex+"</td><td>R$"+hook+"</td><td>R$"+glassValue+"</td><td>R$"+mObra.toFixed(2)+"</td><td>R$"+total+"</td></tr></tbody></table>"
         //Conteúdo
     }
 };
@@ -346,6 +370,14 @@ function mold(){
             case "001RS":
                 mVal=15
                 mImg="001RS";
+            break;
+            case "016IMB":
+                mVal=27
+                mImg="016IMB";
+            break;
+            case "007LILMV_FL":
+                mVal=17
+                mImg="007LILMV_FL";
             break;
         };
         moldStor.push(mVal);

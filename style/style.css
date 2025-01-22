@@ -51,19 +51,29 @@ body{
     background-color: aqua;
     padding:10px;
     height:100%;
-    width:15%;
+    width:20%;
     border: 3px solid black;
     border-radius: 10px;
     text-align: center;
     margin-left:50px;
     min-width: 190px;
 }
+#radio{
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-align: start;
+    flex-wrap: wrap;
+}
+.radio_group{
+    margin:5px;
+}
 #image{
     background-size: contain;
     background-repeat:round;
     padding:10px;
     height:267px;
-    min-width: 150px;
+    min-width: 160px;
     border: 3px solid black;
     border-radius: 10px;
     margin:50px;
@@ -86,7 +96,7 @@ body{
 }
 #money td, th{
     border-radius: 10px;
-    min-width: 110px;
+    min-width: 120px;
     height: 28px;
     padding:5px;
     margin: 20px;
