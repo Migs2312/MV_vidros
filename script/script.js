@@ -38,7 +38,7 @@ function mold(){
 
 
     //Verificação de preenchimento
-        if(len.value<=0 || hei.value<=0 || isNaN(len.value)==true || isNaN(hei.value)==true || glassType==null || mValue==0 || ho.value<=0 || isNaN(ho.value)==true || eucaType==null){
+        if(len.value<=0 || hei.value<=0 || isNaN(len.value)==true || isNaN(hei.value)==true || glassType==null || mValue==0 || ho.value<0 || isNaN(ho.value)==true || eucaType==null){
             if(mValue==0){
                 verific = "Selecione uma moldura válida"
             }
@@ -48,7 +48,7 @@ function mold(){
             else if(hei.value<=0 || isNaN(hei.value)==true){
                 verific = "Preencha o campo Altura com um número válido"
             }
-            else if(ho.value<=0 || isNaN(ho.value)==true){
+            else if(ho.value<0 || isNaN(ho.value)==true){
                 verific = "Preencha o campo Gancho com um número válido"
             }
             else if(glassType==null){
@@ -88,7 +88,7 @@ function mold(){
             //Eucatex
 
             //Gancho
-                hook = ho.value*5;
+                hookVal = (ho.value)*5;
             //Gancho
 
             //Valor do vidro
@@ -114,7 +114,7 @@ function mold(){
             //Valor do vidro
 
             //Cálculo Final
-                totalPrim = ((mValue*(perimeter))+Number(glassValue)+Number(hook)+Number(eucatex));
+                totalPrim = ((mValue*(perimeter))+Number(glassValue)+Number(hookVal)+Number(eucatex));
                 mObra = totalPrim*(0.45)
 
                 totalFix = (Number(totalPrim)+Number(mObra));
@@ -124,7 +124,7 @@ function mold(){
         //Matemática
 
         //Conteúdo
-                result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td>"+ref+"</td><td>"+lengthFix+"x"+heightFix+"</td><td>"+eucaDisplay+"</td><td>"+ho.value+"un</td><td>"+glassName+"</td><td>45%</td></tr><tr><td>R$"+mValue+"</td><td>"+perimeter+"m</td><td>R$"+eucatex+"</td><td>R$"+hook+"</td><td>R$"+glassValue+"</td><td>R$"+mObra.toFixed(2)+"</td><td>R$"+total+"</td></tr></tbody></table>"
+                result.innerHTML = "<table id='money'><thead><th>Moldura</th><th>Medidas</th><th>Eucatex</th><th>Ganchos</th><th>Vidro</th><th>M. Obra</th><th>Total</th></thead><tbody><tr><td>"+ref+"</td><td>"+lengthFix+"x"+heightFix+"</td><td>"+eucaDisplay+"</td><td>"+ho.value+"un</td><td>"+glassName+"</td><td>45%</td></tr><tr><td>R$"+mValue+"</td><td>"+perimeter+"m</td><td>R$"+eucatex+"</td><td>R$"+hookVal+"</td><td>R$"+glassValue+"</td><td>R$"+mObra.toFixed(2)+"</td><td>R$"+total+"</td></tr></tbody></table>"
         //Conteúdo
     }
 };
@@ -264,7 +264,7 @@ function mold(){
                 mImg="117250_FL";
             break;
             case "CL01MV_FL":
-                mVal=35
+                mVal=52
                 mImg="CL01MV_FL";
             break;
             case "200HF75":
@@ -378,6 +378,14 @@ function mold(){
             case "007LILMV_FL":
                 mVal=17
                 mImg="007LILMV_FL";
+            break;
+            case "RIPMV":
+                mVal=17
+                mImg="RIPMV";
+            break;
+            case "MV60":
+                mVal=50
+                mImg="MV60";
             break;
         };
         moldStor.push(mVal);
