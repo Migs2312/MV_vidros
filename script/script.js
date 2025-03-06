@@ -168,7 +168,7 @@ function mold(){
                 mImg="004BR";
             break;
             case "014BR":
-                mVal=17
+                mVal=17.50
                 mImg="014BR";
             break;
             case "016BR":
@@ -176,7 +176,7 @@ function mold(){
                 mImg="016BR";
             break;
             case "114BR":
-                mVal=19
+                mVal=22.50
                 mImg="114BR";
             break;
             case "115BR":
@@ -196,7 +196,7 @@ function mold(){
                 mImg="220BR";
             break;
             case "221BR":
-                mVal=25
+                mVal=29
                 mImg="221BR";
             break;
             case "305BR_FL":
@@ -208,7 +208,7 @@ function mold(){
                 mImg="031700";
             break;
             case "031PFB":
-                mVal=27
+                mVal=28
                 mImg="031PFB";
             break;
             case "016PPF":
@@ -386,6 +386,58 @@ function mold(){
             case "MV60":
                 mVal=50
                 mImg="MV60";
+            break;
+            case "020-H20":
+                mVal=22.50
+                mImg="020-H20";
+            break;
+            case "014COB":
+                mVal=24.50
+                mImg="014COB";
+            break;
+            case "215DRD":
+                mVal=36.50
+                mImg="215DRD";
+            break;
+            case "215S57":
+                mVal=30.50
+                mImg="215S57";
+            break;
+            case "114PF":
+                mVal=19.50
+                mImg="114PF";
+            break;
+            case "001-406":
+                mVal=17.50
+                mImg="001-406";
+            break;
+            case "001AZ":
+                mVal=15.50
+                mImg="001AZ";
+            break;
+            case "001BR":
+                mVal=17
+                mImg="001BR";
+            break;
+            case "221S66":
+                mVal=27
+                mImg="221S66";
+            break;
+            case "221S85":
+                mVal=27.50
+                mImg="221S85";
+            break;
+            case "001PF":
+                mVal=17
+                mImg="001PF";
+            break;
+            case "215GFT":
+                mVal=36.50
+                mImg="215GFT";
+            break;
+            case "115PF":
+                mVal=15
+                mImg="115PF";
             break;
         };
         moldStor.push(mVal);
